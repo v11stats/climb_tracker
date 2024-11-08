@@ -1,5 +1,7 @@
-import ClimbingTracker from '../components/ClimbingTracker';
+import '../styles/globals.css';
 
-export default function Home() {
-  return <ClimbingTracker />;
+function MyApp({ Component, pageProps }) {
+  return <Component {...pageProps} />;
 }
+
+export default MyApp;
