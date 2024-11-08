@@ -1,51 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Timer, Download, Plus, Minus, User } from 'lucide-react';
-// src/components/Card.tsx
-import React from 'react';
-
-interface CardProps extends React.ComponentProps<'div'> {}
-
-export function Card({ children, ...props }: CardProps) {
-  return (
-    <div {...props} className="rounded-lg shadow-md bg-white dark:bg-gray-800">
-      {children}
-    </div>
-  );
-}
-
-// src/components/CardHeader.tsx
-interface CardHeaderProps extends React.ComponentProps<'header'> {}
-
-export function CardHeader({ children, ...props }: CardHeaderProps) {
-  return (
-    <header {...props} className="p-4 border-b border-gray-200 dark:border-gray-700">
-      {children}
-    </header>
-  );
-}
-
-// src/components/CardTitle.tsx
-
-interface CardTitleProps extends React.ComponentProps<'h2'> {}
-export function CardTitle({ children, ...props }: CardTitleProps) {
-  return (
-    <h2 {...props} className="text-xl font-semibold text-gray-900 dark:text-white">
-      {children}
-    </h2>
-  );
-}
-
-// src/components/CardContent.tsx
-
-interface CardContentProps extends React.ComponentProps<'div'> {}
-export function CardContent({ children, ...props }: CardContentProps) {
-  return (
-    <div {...props} className="p-4">
-      {children}
-    </div>
-  );
-}
-
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 
 const ClimbingTracker = () => {
   const PHASES = ['Warm Up', 'Climbing', 'Cool Down', 'Rehab', 'Complete'];
